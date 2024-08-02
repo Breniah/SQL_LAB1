@@ -1,0 +1,10 @@
+Go to the https://www.postgresql.org/download/ to download PostgreSQL
+The Set up:
+Installation Directory: pressvNext->
+Select Components: Select everything and press Next->
+Data Directory: press Next->
+Password: Provide password and and retype then press Next->
+Port: press Next->
+Advanced options: press Next->
+Ready to install: press Next->
+Completeing the PostgreSQL Setup Wizard: Check Stack Builder and press Next->
