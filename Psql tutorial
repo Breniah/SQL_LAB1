@@ -1,0 +1,79 @@
+Open psql
+Press Enter x3 till you get to the password 
+Enter password
+\c to connent to postgre
+\c database to connect to database 
+In this example the database name is politics 
+\c politics 
+Now enter the data:
+INSERT  INTO states(statecode, population_2010, population_2000, population_1950, population_1900, landarea, name, admitted_to_union)VALUES 
+('AL', 4779736, 4447100, 3061743, 1828697, 52419.02, 'Alabama', '12-14-1819'),
+('AK', 710231, 626932, 128643, 63592, 663267.26, 'Alaska','01-03-1959'),
+ ('AZ', 6329017, 5130632, 749587, 122931, 113998.30, 'Arizona', '02-14-1912'),
+('AR', 2915918, 2673400, 1909511, 1311564, 53178.62, 'Arkansas', '06-15-1836'),
+ ('CA', 37253956, 33871648, 10586223, 1485053, 163695.57, 'California','09-09-1850'),
+('CO', 5029196, 4301261, 1325089, 539700, 104093.57, 'Colorado', '08-01-1876'),
+('CT', 3518288, 3405565, 2007280, 908420, 5543.33, 'Connecticut', '01-09-1788' ),
+('DE', 897934, 783600, 318085, 184735, 2489.27, 'Delaware', '12-07-1787'),
+ ('FL', 18801310, 15982378, 2771305, 528542, 65754.59, 'Florida', '03-03-1845'),
+('GA', 9687653, 8186453, 3444578, 2216331, 59424.77, 'Georgia', '01-02-1788'),
+('HI', 1360301, 1211537, 499794, 154001, 10930.98, 'Hawaii', '08-21-1959'),
+('ID', 1567582, 1293953, 588637, 161772, 83570.08, 'Idaho', '07-03-1890'),
+('IL', 12830632, 12419293, 8712176, 4821550, 57914.38, 'Illinois', '12-03-1818'),
+('IN', 6483802, 6080485, 3934224, 2516462, 36417.73, 'Indiana', '12-11-1816'),
+('IA', 3046355, 2926324, 2621073, 2231853, 56271.55, 'Iowa', '12-28-1846'),
+('KS', 2853118, 2688418, 1905299, 1470495, 82276.84, 'Kansas', '01-29-1861'),
+('KY', 4339367, 4041769, 2944806, 2147174, 40409.02, 'Kentucky', '06-01-1792'),
+('LA', 4533372, 4468976, 2683516, 1381625, 51839.70, 'Louisiana', '04-30-1812'),
+('ME', 1328361, 1274923, 913774, 694466, 35384.65, 'Maine', '03-15-1820'),
+('MD', 5773552, 5296486, 2343001, 1188044, 12406.68, 'Maryland', '04-28-1788');
+
+INSERT INTO counties(name, statecode, population_1950, population_2010)VALUES
+('Autauga', 'AL', 18186,54571),
+('Baldwin', 'AL', 40997,182265),
+('Barbour', 'AL', 28892,27457),
+('Bibb', 'AL', 17987,22915),
+('Blount', 'AL', 28975,57322),
+('Bullock', 'AL', 16054,10914),
+('Butler', 'AL', 29228,20947),
+('Calhoun', 'AL', 79539,118572),
+('Chambers', 'AL', 39528,34215),
+('Cherokee', 'AL', 17634,25989),
+('Chilton', 'AL', 26922,43643),
+('Choctaw', 'AL', 19152,13859),
+('Clarke', 'AL', 26548,25833),
+('Clay', 'AL', 13929,13932),
+('Cleburne', 'AL', 11904,14972),
+('Coffee', 'AL', 30720,49948),
+('Colbert', 'AL', 39561,54428),
+('Conecuh', 'AL', 21776,13228),
+('Coosa', 'AL', 11766,11539),
+('Covington', 'AL', 40373,37765);
+
+INSERT INTO senators(statecode, name, affiliation, took_office, born)VALUES
+('AL', 'Jeff Sessions', 'R', 1997, 1946),
+('AL', 'Richard Shelby', 'R', 1987, 1934),
+('AK', 'Mark Begich', 'D', 2009, 1962),
+('AK', 'Lisa Murkowski', 'R', 2002, 1957),
+('AZ', 'John McCain', 'R', 1987, 1936),
+('AZ', 'Jon Kyl', 'R', 1995, 1942),
+('AR', 'John Boozman', 'R', 2011, 1950),
+('AR', 'Mark Pryor', 'D', 2003, 1963),
+('CA', 'Barbara Boxer', 'D', 1993, 1940),
+('CA', 'Dianne Feinstein', 'D', 1992, 1933),
+('CO', 'Mark Udall', 'D', 2009, 1950),
+('CO', 'Michael Bennet', 'D', 2009, 1964),
+('CT', 'Richard Blumenthal', 'D', 2011, 1946),
+('CT', 'Joe Lieberman', 'D', 1989, 1942),
+('DE', 'Thomas Carper', 'D', 2001, 1947),
+('DE', 'Chris Coons', 'D', 2010, 1963),
+('FL', 'Bill Nelson', 'D', 2001, 1942),
+('FL', 'Marco Rubio', 'R', 2011, 1971),
+('GA', 'Saxby Chambliss', 'R', 2003, 1943),
+('GA', 'Johnny Isakson', 'R', 2005, 1944);
+
+INSERT INTO committees(id, parent_committee, name, chairman, ranking_member)VALUES
+('ANF', NULL, 'Agriculture, Nutrition and Forestry', 'Jeff Sessions', 'Richard Shelby'),
+('APR', NULL, 'Appropriations', 'Mark Begich', 'Lisa Murkowski'),
+('ANF2', NULL, 'Conservation, Forestry and Natural Resources', 'John McCain ', 'Jon Kyl'),
+('ANF3', NULL, 'Jobs, Rural Economic Growth and Energy Innovation', 'John Boozman', 'Mark Pryor');
